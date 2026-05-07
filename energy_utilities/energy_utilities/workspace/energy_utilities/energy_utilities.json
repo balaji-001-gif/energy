@@ -1,0 +1,32 @@
+{
+  "doctype": "Workspace",
+  "name": "Energy Utilities",
+  "label": "Energy & Utilities",
+  "module": "Energy Utilities",
+  "icon": "lightning",
+  "public": 1,
+  "shortcuts": [
+    {"label": "Verticals", "link_to": "Industry Vertical", "type": "DocType"},
+    {"label": "Assets", "link_to": "Asset Node", "type": "DocType"},
+    {"label": "Readings", "link_to": "Operational Reading", "type": "DocType"},
+    {"label": "Incidents", "link_to": "Operational Incident", "type": "DocType"},
+    {"label": "IoT Events", "link_to": "IoT Event", "type": "DocType"},
+    {"label": "Connections", "link_to": "Consumer Connection", "type": "DocType"}
+  ],
+  "links": [
+    {"label": "Setup", "type": "Card Break"},
+    {"label": "Industry Vertical", "link_to": "Industry Vertical", "link_type": "DocType", "type": "Link"},
+    {"label": "Vertical Config", "link_to": "Vertical Config", "link_type": "DocType", "type": "Link"},
+    {"label": "Energy Utilities Settings", "link_to": "Energy Utilities Settings", "link_type": "DocType", "type": "Link"},
+
+    {"label": "Operations", "type": "Card Break"},
+    {"label": "Asset Node", "link_to": "Asset Node", "link_type": "DocType", "type": "Link"},
+    {"label": "Operational Reading", "link_to": "Operational Reading", "link_type": "DocType", "type": "Link"},
+    {"label": "Operational Incident", "link_to": "Operational Incident", "link_type": "DocType", "type": "Link"},
+    {"label": "IoT Event", "link_to": "IoT Event", "link_type": "DocType", "type": "Link"},
+
+    {"label": "Customer & Billing", "type": "Card Break"},
+    {"label": "Consumer Connection", "link_to": "Consumer Connection", "link_type": "DocType", "type": "Link"},
+    {"label": "Service Tariff", "link_to": "Service Tariff", "link_type": "DocType", "type": "Link"}
+  ]
+}

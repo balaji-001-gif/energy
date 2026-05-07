@@ -1,0 +1,19 @@
+{
+  "doctype": "DocType",
+  "name": "Vertical Config",
+  "module": "Energy Utilities",
+  "autoname": "field:config_key",
+  "fields": [
+    {"fieldname": "config_key", "fieldtype": "Data", "reqd": 1, "unique": 1},
+    {"fieldname": "vertical", "fieldtype": "Link", "options": "Industry Vertical", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "asset_types", "fieldtype": "Small Text", "label": "Asset Types (comma)"},
+    {"fieldname": "incident_types", "fieldtype": "Small Text", "label": "Incident Types (comma)"},
+    {"fieldname": "reading_unit", "fieldtype": "Data", "label": "Primary Reading Unit", "in_list_view": 1},
+    {"fieldname": "secondary_unit", "fieldtype": "Data", "label": "Secondary Unit"},
+    {"fieldname": "kpi_table", "fieldtype": "Table", "options": "Vertical KPI"},
+    {"fieldname": "threshold_table", "fieldtype": "Table", "options": "Vertical Threshold"},
+    {"fieldname": "billing_enabled", "fieldtype": "Check", "default": 1},
+    {"fieldname": "iot_enabled", "fieldtype": "Check", "default": 1},
+    {"fieldname": "compliance_required", "fieldtype": "Check", "default": 1}
+  ]
+}

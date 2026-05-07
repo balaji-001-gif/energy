@@ -1,0 +1,15 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Log",
+  "module": "Energy Utilities",
+  "autoname": "hash",
+  "fields": [
+    {"fieldname": "vertical", "fieldtype": "Link", "options": "Industry Vertical", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "kpi_name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "value", "fieldtype": "Float", "in_list_view": 1},
+    {"fieldname": "target", "fieldtype": "Float"},
+    {"fieldname": "unit", "fieldtype": "Data"},
+    {"fieldname": "log_date", "fieldtype": "Date", "default": "today", "in_list_view": 1},
+    {"fieldname": "status", "fieldtype": "Data"}
+  ]
+}

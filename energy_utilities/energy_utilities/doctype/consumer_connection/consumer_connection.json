@@ -1,0 +1,20 @@
+{
+  "doctype": "DocType",
+  "name": "Consumer Connection",
+  "module": "Energy Utilities",
+  "autoname": "naming_series:",
+  "fields": [
+    {"fieldname": "naming_series", "fieldtype": "Select", "options": "CON-.YYYY.-"},
+    {"fieldname": "customer", "fieldtype": "Link", "options": "Customer", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "vertical", "fieldtype": "Link", "options": "Industry Vertical", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "service_category", "fieldtype": "Select", "options": "Domestic\nCommercial\nIndustrial\nAgricultural\nBulk\nGovernment", "in_list_view": 1},
+    {"fieldname": "meter_serial", "fieldtype": "Data", "unique": 1},
+    {"fieldname": "meter_type", "fieldtype": "Select", "options": "Smart (AMI)\nAMR\nManual\nProportional"},
+    {"fieldname": "feeder_or_main", "fieldtype": "Link", "options": "Asset Node"},
+    {"fieldname": "tariff", "fieldtype": "Link", "options": "Service Tariff"},
+    {"fieldname": "address", "fieldtype": "Small Text"},
+    {"fieldname": "geo_location", "fieldtype": "Geolocation"},
+    {"fieldname": "service_item", "fieldtype": "Link", "options": "Item", "description": "ERPNext item used in invoices"},
+    {"fieldname": "status", "fieldtype": "Select", "options": "Active\nDisconnected\nSuspended\nClosed", "default": "Active", "in_list_view": 1}
+  ]
+}

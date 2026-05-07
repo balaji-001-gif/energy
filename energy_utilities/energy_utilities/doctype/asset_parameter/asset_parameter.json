@@ -1,0 +1,11 @@
+{
+  "doctype": "DocType",
+  "name": "Asset Parameter",
+  "module": "Energy Utilities",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "parameter_name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "value", "fieldtype": "Data", "in_list_view": 1},
+    {"fieldname": "uom", "fieldtype": "Link", "options": "UOM"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "doctype": "DocType",
+  "name": "Tariff Slab",
+  "module": "Energy Utilities",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "from_unit", "fieldtype": "Float", "in_list_view": 1},
+    {"fieldname": "to_unit", "fieldtype": "Float", "in_list_view": 1},
+    {"fieldname": "rate", "fieldtype": "Currency", "in_list_view": 1}
+  ]
+}

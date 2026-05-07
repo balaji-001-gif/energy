@@ -1,0 +1,24 @@
+{
+  "doctype": "DocType",
+  "name": "Operational Incident",
+  "module": "Energy Utilities",
+  "autoname": "naming_series:",
+  "is_submittable": 1,
+  "fields": [
+    {"fieldname": "naming_series", "fieldtype": "Select", "options": "INC-.YYYY.-"},
+    {"fieldname": "vertical", "fieldtype": "Link", "options": "Industry Vertical", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "incident_type", "fieldtype": "Data", "in_list_view": 1,
+     "description": "Driven by Vertical Config (Outage / Leak / Spill / Contamination / Trip)"},
+    {"fieldname": "severity", "fieldtype": "Select", "options": "Low\nMedium\nHigh\nCritical", "in_list_view": 1},
+    {"fieldname": "asset", "fieldtype": "Link", "options": "Asset Node"},
+    {"fieldname": "start_time", "fieldtype": "Datetime", "reqd": 1},
+    {"fieldname": "end_time", "fieldtype": "Datetime"},
+    {"fieldname": "duration_minutes", "fieldtype": "Float", "read_only": 1},
+    {"fieldname": "consumers_affected", "fieldtype": "Int"},
+    {"fieldname": "volume_loss", "fieldtype": "Float", "label": "Volume / Energy Loss"},
+    {"fieldname": "root_cause", "fieldtype": "Small Text"},
+    {"fieldname": "corrective_action", "fieldtype": "Text"},
+    {"fieldname": "status", "fieldtype": "Select",
+     "options": "Reported\nDispatched\nIn Progress\nResolved\nClosed", "default": "Reported"}
+  ]
+}

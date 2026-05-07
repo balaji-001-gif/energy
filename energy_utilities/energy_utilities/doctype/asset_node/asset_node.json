@@ -1,0 +1,30 @@
+{
+  "doctype": "DocType",
+  "name": "Asset Node",
+  "module": "Energy Utilities",
+  "autoname": "naming_series:",
+  "track_changes": 1,
+  "fields": [
+    {"fieldname": "naming_series", "fieldtype": "Select", "options": "AN-.YYYY.-", "reqd": 1},
+    {"fieldname": "asset_name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "vertical", "fieldtype": "Link", "options": "Industry Vertical", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "asset_type", "fieldtype": "Data", "label": "Asset Type", "in_list_view": 1},
+    {"fieldname": "parent_asset", "fieldtype": "Link", "options": "Asset Node", "label": "Parent Asset (Hierarchy)"},
+    {"fieldname": "section_break_op", "fieldtype": "Section Break", "label": "Operational"},
+    {"fieldname": "capacity", "fieldtype": "Float"},
+    {"fieldname": "capacity_uom", "fieldtype": "Link", "options": "UOM"},
+    {"fieldname": "operational_status", "fieldtype": "Select",
+     "options": "Running\nIdle\nMaintenance\nShutdown\nDecommissioned", "default": "Running", "in_list_view": 1},
+    {"fieldname": "location", "fieldtype": "Geolocation"},
+    {"fieldname": "section_break_iot", "fieldtype": "Section Break", "label": "IoT / SCADA"},
+    {"fieldname": "iot_tag", "fieldtype": "Data", "unique": 1},
+    {"fieldname": "iot_endpoint", "fieldtype": "Data"},
+    {"fieldname": "section_break_param", "fieldtype": "Section Break", "label": "Parameters"},
+    {"fieldname": "parameters", "fieldtype": "Table", "options": "Asset Parameter"},
+    {"fieldname": "section_break_comp", "fieldtype": "Section Break", "label": "Compliance"},
+    {"fieldname": "regulatory_license", "fieldtype": "Data"},
+    {"fieldname": "license_expiry", "fieldtype": "Date"},
+    {"fieldname": "last_inspection", "fieldtype": "Date"},
+    {"fieldname": "next_pm_date", "fieldtype": "Date"}
+  ]
+}

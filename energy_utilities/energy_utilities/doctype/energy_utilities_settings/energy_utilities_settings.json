@@ -1,0 +1,20 @@
+{
+  "doctype": "DocType",
+  "name": "Energy Utilities Settings",
+  "module": "Energy Utilities",
+  "issingle": 1,
+  "fields": [
+    {"fieldname": "section_integration", "fieldtype": "Section Break", "label": "Integrations"},
+    {"fieldname": "scada_url", "fieldtype": "Data"},
+    {"fieldname": "scada_token", "fieldtype": "Password"},
+    {"fieldname": "ami_url", "fieldtype": "Data"},
+    {"fieldname": "ami_token", "fieldtype": "Password"},
+    {"fieldname": "gis_url", "fieldtype": "Data", "label": "GIS Map Service URL"},
+    {"fieldname": "section_billing", "fieldtype": "Section Break", "label": "Billing"},
+    {"fieldname": "billing_day", "fieldtype": "Int", "default": 1},
+    {"fieldname": "auto_invoice", "fieldtype": "Check", "default": 1},
+    {"fieldname": "section_thresholds", "fieldtype": "Section Break", "label": "Thresholds"},
+    {"fieldname": "anomaly_multiplier", "fieldtype": "Float", "default": 3.0, "description": "Flag readings > N \u00d7 historical avg"},
+    {"fieldname": "carbon_daily_limit_kg", "fieldtype": "Float"}
+  ]
+}

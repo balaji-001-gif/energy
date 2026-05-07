@@ -1,0 +1,25 @@
+{
+  "doctype": "DocType",
+  "name": "Operational Reading",
+  "module": "Energy Utilities",
+  "autoname": "naming_series:",
+  "is_submittable": 1,
+  "fields": [
+    {"fieldname": "naming_series", "fieldtype": "Select", "options": "OR-.YYYY.-.MM.-"},
+    {"fieldname": "vertical", "fieldtype": "Link", "options": "Industry Vertical", "reqd": 1},
+    {"fieldname": "reading_source", "fieldtype": "Select",
+     "options": "Manual\nAMR\nAMI\nSCADA\nIoT Sensor\nThird-party", "default": "AMI"},
+    {"fieldname": "asset", "fieldtype": "Link", "options": "Asset Node"},
+    {"fieldname": "consumer", "fieldtype": "Link", "options": "Consumer Connection"},
+    {"fieldname": "reading_date", "fieldtype": "Datetime", "default": "now", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "parameter", "fieldtype": "Data", "label": "Parameter (kWh / m\u00b3 / bar / m/s ...)", "in_list_view": 1},
+    {"fieldname": "previous_value", "fieldtype": "Float", "read_only": 1},
+    {"fieldname": "current_value", "fieldtype": "Float", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "delta_value", "fieldtype": "Float", "read_only": 1, "in_list_view": 1},
+    {"fieldname": "uom", "fieldtype": "Link", "options": "UOM"},
+    {"fieldname": "tariff", "fieldtype": "Link", "options": "Service Tariff"},
+    {"fieldname": "amount", "fieldtype": "Currency", "read_only": 1},
+    {"fieldname": "billed", "fieldtype": "Check"},
+    {"fieldname": "sales_invoice", "fieldtype": "Link", "options": "Sales Invoice", "read_only": 1}
+  ]
+}

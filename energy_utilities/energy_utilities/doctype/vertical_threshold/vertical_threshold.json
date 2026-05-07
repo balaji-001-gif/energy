@@ -1,0 +1,13 @@
+{
+  "doctype": "DocType",
+  "name": "Vertical Threshold",
+  "module": "Energy Utilities",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "parameter", "fieldtype": "Data", "in_list_view": 1, "reqd": 1},
+    {"fieldname": "min_value", "fieldtype": "Float"},
+    {"fieldname": "max_value", "fieldtype": "Float"},
+    {"fieldname": "alert_level", "fieldtype": "Select", "options": "Warning\nAlarm\nCritical"},
+    {"fieldname": "action", "fieldtype": "Select", "options": "Notify\nCreate Incident\nShutdown Asset"}
+  ]
+}
