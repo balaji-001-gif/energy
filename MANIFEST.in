@@ -1,0 +1,11 @@
+include *.txt
+include *.md
+recursive-include energy_utilities *.py
+recursive-include energy_utilities *.html
+recursive-include energy_utilities *.js
+recursive-include energy_utilities *.json
+recursive-include energy_utilities *.css
+recursive-include energy_utilities *.png
+recursive-include energy_utilities *.jpg
+recursive-include energy_utilities *.svg
+recursive-include energy_utilities *.csv
